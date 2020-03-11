@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Border Radius Previewer</title>
+    <script type="text/javascript" src="main.js">  </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu">
+            <p>Valor do canto superior direito: <input type="text" id="menu-top-right"
+                    onkeypress="return event.charCode >= 48 && event.charCode <= 57"></p>
+            <p>Valor do canto superior esquerdo: <input type="text" id="menu-top-left"
+                    onkeypress="return event.charCode >= 48 && event.charCode <= 57"></p>
+            <p>Valor do canto inferior direito: <input type="text" id="menu-bottom-right"
+                    onkeypress="return event.charCode >= 48 && event.charCode <= 57"></p>
+            <p>Valor do canto inferior esquerdo: <input type="text" id="menu-bottom-left"
+                    onkeypress="return event.charCode >= 48 && event.charCode <= 57"></p>
+            <p class="apply-change"><input type="button" onclick="changeBorder()" value="Aplicar"></p>
+
+            <div class="content-box">
+                <div id="box" class="box"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
