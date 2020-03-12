@@ -20,10 +20,11 @@
                     onkeypress="return event.charCode >= 48 && event.charCode <= 57"></p>
             <p>Valor do canto inferior esquerdo: <input type="text" id="menu-bottom-left"
                     onkeypress="return event.charCode >= 48 && event.charCode <= 57"></p>
-            <p class="apply-change"><input type="button" onclick="changeBorder()" value="Aplicar"></p>
+            <p class="action-buttons"><input type="button" onclick="changeBorder()" value="Aplicar">
+                <input type="button" onclick="copyToClipboard()" onclick="copyToClipboard()" value="Copiar"></p>
 
             <div class="content-box">
-                <div id="box" class="box"></div>
+                <div id="box" class="box"><textarea id="code" readonly></textarea></div>
             </div>
         </div>
     </div>
