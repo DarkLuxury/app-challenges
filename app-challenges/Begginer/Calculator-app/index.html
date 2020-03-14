@@ -15,7 +15,9 @@
             <div class="display-head">
                 <div class="display-row">
                     <div class="display">
-                        <p class="history"><input type="text" value="Historico" readonly></p>
+                        <p class="history"><input type="text" id="last-num" readonly></p>
+                        <p class="symbol"><input type="text" id="mat-symbol" readonly></p>
+                        <p class="symbol"><input type="text" id="mat-result" readonly></p>
                         <p class="current"><input type="text" id="current-num" maxlength="8"
                                 onkeypress="return onlynumber(); readonly"></p>
                     </div>
@@ -23,28 +25,31 @@
             </div>
             <div class="display-body">
                 <div class="display-row">
-                    <div class="button"><input type="button" id="button-ce" value="CE"></div>
-                    <div class="button"><input type="button" id="button-c" value="C"></div>
-                    <div class="button"><input type="button" id="button-equal" value="="></div>
-                    <div class="button"><input type="button" id="button-split" value="/"></div>
+                    <div class="button"><input type="button" id="button-ce" onclick="catchOperation(this)" value="CE"></div>
+                    <div class="button"><input type="button" id="button-c" onclick="catchOperation(this)" value="C"></div>
+                    <div class="button"><input type="button" id="button-equal" onclick="catchMatSymbol(this)" value="="></div>
+                    <div class="button"><input type="button" id="button-split" onclick="catchMatSymbol(this)" value="/"></div>
                 </div>
                 <div class="display-row">
                     <div class="button"><input type="button" id="button-sev" onclick="catchNumber(this)" value="7"></div>
                     <div class="button"><input type="button" id="button-eig" onclick="catchNumber(this)" value="8"></div>
                     <div class="button"><input type="button" id="button-nin" onclick="catchNumber(this)" value="9"></div>
-                    <div class="button"><input type="button" id="button-mult" value="*"></div>
+                    <div class="button"><input type="button" id="button-mult" onclick="catchMatSymbol(this)" value="*"></div>
                 </div>
                 <div class="display-row">
                     <div class="button"><input type="button" id="button-fou" onclick="catchNumber(this)" value="4"></div>
                     <div class="button"><input type="button" id="button-fiv" onclick="catchNumber(this)" value="5"></div>
                     <div class="button"><input type="button" id="button-six" onclick="catchNumber(this)" value="6"></div>
-                    <div class="button"><input type="button" id="button-subt" value="-"></div>
+                    <div class="button"><input type="button" id="button-subt" onclick="catchMatSymbol(this)" value="-"></div>
                 </div>
                 <div class="display-row">
                     <div class="button"><input type="button" id="button-one" onclick="catchNumber(this)" value="1"></div>
                     <div class="button"><input type="button" id="button-two" onclick="catchNumber(this)" value="2"></div>
                     <div class="button"><input type="button" id="button-three" onclick="catchNumber(this)" value="3"></div>
-                    <div class="button"><input type="button" id="button-add" value="+"></div>
+                    <div class="button"><input type="button" id="button-add" onclick="catchMatSymbol(this)" value="+"></div>
+                </div>
+                <div class="display-row">
+                    <div class="button"><input type="button" id="button-zero" onclick="catchNumber(this)" value="0"></div>
                 </div>
             </div>
         </div>

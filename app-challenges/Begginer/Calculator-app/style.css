@@ -11,7 +11,18 @@ body {
 .box{
     background: white;
     width: 200px;
-    height: 275px;
+    height: 375px;
+}
+#mat-symbol{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+    text-align: center;
+}
+#mat-result{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
 }
 
 .button, input[type=button]{
